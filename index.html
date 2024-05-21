@@ -3,23 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
     <title>Formulario Simulacro</title>
 </head>
 <body>
     <form class="formulario">
-        <h2>Completa este formulario</h2>
-        <div class="inputes">
-            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <h2> REGISTRO   </h2>
+        <div >
+            <input class="inputes" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
         </div>
-        <div class="inputes">
-            <label>Temperatura:</label>
-            <input type="range" min="-10" max="60" oninput="mostrarTemp()">
+        <div class="temp" >
+            <label class="subtitle">Temperatura:</label> <br>
+            <input class="inputes" type="range" min="-10" max="60" oninput="mostrarTemp()">
         </div>
-        <div class="inputes">
-            <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required> 
+        <div >
+            <input class="inputes" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required> 
         </div>
+
+        <button class="boton" onclick="validar()"> Enviar </button>
+
     </form>
 
-    <button class="boton" onclick="validar()"> Enviar </button>
+    
 </body>
 </html>
