@@ -37,6 +37,10 @@ function validar() {
     resultadoDiv.style.display = 'block';
 
     if (errores.length > 0) {
+        const errorTitle = document.createElement('h3');
+        errorTitle.textContent = 'Errores: ';
+        resultadoDiv.appendChild(errorTitle);
+
         errores.forEach(error => {
             const errorP = document.createElement('p');
             errorP.className = 'error';
@@ -48,7 +52,7 @@ function validar() {
 
     // Si todas las validaciones son correctas, mostrar los datos
     const successMessage = `
-        <h3>Datos Enviados</h3>
+        <h4>Datos Enviados: </h4>
         <p class="success"><strong>Nombre:</strong> ${nombre}</p>
         <p class="success"><strong>Teléfono:</strong> ${telefono}</p>
         <p class="success"><strong>Temperatura:</strong> ${temperatura}°C</p>
@@ -56,3 +60,4 @@ function validar() {
     resultadoDiv.innerHTML = successMessage;
     resultadoDiv.scrollIntoView({ behavior: 'smooth' });
 }
+
