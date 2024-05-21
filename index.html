@@ -7,23 +7,26 @@
     <title>Formulario Simulacro</title>
 </head>
 <body>
-    <form class="formulario">
-        <h2> REGISTRO   </h2>
-        <div >
-            <input class="inputes" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-        </div>
-        <div class="temp" >
-            <label class="subtitle">Temperatura:</label> <br>
-            <input class="inputes" type="range" min="-10" max="60" oninput="mostrarTemp()">
-        </div>
-        <div >
-            <input class="inputes" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required> 
-        </div>
-
-        <button class="boton" onclick="validar()"> Enviar </button>
-
-    </form>
-
-    
+    <div class="container">
+        <form class="formulario" id="formulario">
+            <h2>REGISTRO</h2>
+            <div>
+                <input class="inputes" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="temp">
+                <h3 class="title">Temperatura: </h3>
+                <span id="tempOutput">25</span>°C 
+            </div>
+            <div>
+                <input class="inputes" type="range" id="temperatura" min="-10" max="60" value="25" oninput="mostrarTemp()">
+            </div>
+            <div>
+                <input class="inputes" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+            </div>
+            <button class="boton" type="button" onclick="validar()">Enviar</button>
+        </form>
+        <div id="resultado" style="display: none;"></div>
+    </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
