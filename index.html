@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <title>Formulario Simulacro</title>
+    <title>FORMULARIO DE RESEÑAS</title>
 </head>
 <body>
     <div class="container">
-        <form class="formulario" id="formulario">
-            <h2>REGISTRO</h2>
+        <form class="formulario" id="formulario" novalidate>
+            <h2>RESEÑA PARA LA PELÍCULA</h2>
             <div>
-                <input class="inputes" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <input class="inputes" type="text" id="nombre" name="nombre" placeholder="Nombre de Película" required>
                 <span class="error-message" id="nombre-error"></span>
             </div>
-            <div class="temp">
-                <h3 class="title">Temperatura: </h3>
-                <span id="tempOutput">25</span>°C 
+            <div class="puntuacion">
+                <h3 class="title">PUNTUACIÓN: </h3>
+                <span id="pun">0</span>
             </div>
             <div>
-                <input class="inputes" type="range" id="temperatura" min="-10" max="60" value="25" oninput="mostrarTemp()">
+                <input class="inputes" type="range" id="reseña" min="0" max="5" value="0" oninput="mostrarReseña()" required>
+                <span class="error-message" id="reseña-error"></span>
             </div>
             <div>
-                <input class="inputes" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                <span class="error-message" id="telefono-error"></span>
+                <textarea class="inputes" type="text" id="comentario" name="telefono" placeholder="Comentarios sobre Película (OPCIONAL)"></textarea>
+                <span class="error-message" id="comentario-error"></span>
             </div>
             <button class="boton" type="button" onclick="validar()">Enviar</button>
         </form>

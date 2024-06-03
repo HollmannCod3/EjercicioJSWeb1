@@ -62,18 +62,18 @@ body {
     outline: none;
 }
 
-.formulario .temp {
+.formulario .puntuacion {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
-.formulario .temp h3 {
+.formulario .puntuacion h3 {
     font-size: 16px;
     color: #333;
 }
 
-.formulario #tempOutput {
+.formulario #pun {
     font-size: 16px;
     margin-left: 10px;
     font-weight: bold;
@@ -105,6 +105,8 @@ body {
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     width: 100%;
+    max-width: 500px;
+    overflow-wrap: break-word;
 }
 #resultado:hover {
     transform: translateY(-10px);
@@ -116,7 +118,7 @@ body {
 #resultado h4 {
     font-size: 18px;
     margin-bottom: 20px;
-    color: #4caf50;
+    color: #555;
 }
 
 #resultado p {
@@ -126,9 +128,10 @@ body {
 
 
 #resultado .success {
-    color: #4caf50;
+    color: #667eea;
     font-weight: bold;
     margin-bottom: 10px;
+    
 }
 
 input[type="range"] {
@@ -163,6 +166,9 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50%;
     background: #667eea;
     cursor: pointer;
+}
+textarea::placeholder{
+    font-family: sans-serif;
 }
 
 
